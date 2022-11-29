@@ -13,7 +13,6 @@ def main(speed=0, bg_color="grey"):
     # change background color
     turtle_screen.bgcolor(bg_color)
 
-    """TODO: define different colors here"""
 
     def randomcolor():
         colorArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
@@ -26,8 +25,6 @@ def main(speed=0, bg_color="grey"):
         # define some params
         size = 18
         pos = [np.random.randint(-300, 300), np.random.randint(-300, 300)]
-
-        """TODO: set snowflake color here (one of the colors defined above)"""
 
         # Go to the start position of the snowflake
         myTurtle.penup()
