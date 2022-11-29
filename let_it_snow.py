@@ -1,20 +1,26 @@
 import turtle
 import numpy as np
+import random
 
 
 def main(speed=0, bg_color="grey"):
     # create Turtle object
     turtle_screen = turtle.Screen()
     myTurtle = turtle.Turtle()
-    
+
     # set speed to 'fastest = 0'
     myTurtle.speed(speed)
     # change background color
     turtle_screen.bgcolor(bg_color)
-  
- 
+
     """TODO: define different colors here"""
 
+    def randomcolor():
+        colorArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+        color = ""
+        for i in range(6):
+            color += colorArr[random.randint(0, 14)]
+        return '#' + color
 
     for _ in range(10):
         # define some params
@@ -32,6 +38,7 @@ def main(speed=0, bg_color="grey"):
         for _ in range(8):
             snowflake_branch(size, myTurtle)
             myTurtle.left(45)
+            myTurtle.color(randomcolor())
 
 
 def snowflake_branch(size, myTurtle):
